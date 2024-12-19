@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: white;}
+#Current Run RX {background-color: white;}
+#Contact {background-color: white;}
+#Current Run RX {background-color: white;}
+#PDF {background-color: white;}
+#Image {background-color: white;}
+#History {background-color: white;}
+#Medication Print {background-color: white;}
+#History {background-color: white;}
+
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'red')"id="defaultOpen" style="width: 7%">Home</button>
+<button class="tablink" onclick="openPage('Current Run RX', this, 'teal')" style="width: 10%">Current Run RX</button>
+<button class="tablink" onclick="openPage('Contact', this, 'teal')" style="width: 7%">Contact</button>
+<button class="tablink" onclick="openPage('Medical Card', this, 'teal')" style="width: 8%">Medical Card</button>
+<button class="tablink" onclick="openPage('PDF', this, 'teal')" style="width: 5%">PDF</button>
+<button class="tablink" onclick="openPage('Image', this, 'teal')" style="width: 5%">Image</button>
+<button class="tablink" onclick="openPage('History', this, 'teal')" style="width: 4%">History</button>
+<button class="tablink" onclick="openPage('Medication Print', this, 'teal')" style="width: 10%">Medication Print</button>
+<button class="tablink" onclick="openPage('Medication', this, 'teal')" style="width: 7%">Medication</button>
+<button class="tablink" onclick="openPage('Notes', this, 'teal')" style="width: 7%">Notes</button>
+
+<div id="Home" class="tabcontent">
+  
+	<iframe id="I1" height="800" name="I1" src="index2.html" width="90%" border="0" frameborder="0">
+	Your browser does not support inline frames or is currently configured not to display inline frames.
+	</iframe>
+  
+</div>
+<div>
+<div id="Current Run RX" class="tabcontent">
+    <iframe id="I12" name="I12" border="0" frameborder="0" height="600" src="current_run_rx.html" width="100%">
+	Your browser does not support inline frames or is currently configured not to display inline frames.
+	</iframe>
+</div>
+
+
+
+
+<div id="Contact" class="tabcontent">
+	<iframe id="I4" border="0" frameborder="0" height="800" name="I4" src="Contacts.html" width="100%">
+	Your browser does not support inline frames or is currently configured not to display inline frames.
+	</iframe>
+</div>
+
+<div id="Medical Card" class="tabcontent">
+  <iframe id="I3" height="800" name="I3" src="medcard.html" width="100%" border="0" frameborder="0">
+	Your browser does not support inline frames or is currently configured not to display inline frames.
+	</iframe>
+  
+</div>
+
+<div id="PDF" class="tabcontent">
+  <iframe id="I5" height="800" name="I5" src="pdf_online.html" width="110%" border="0" frameborder="0">
+	Your browser does not support inline frames or is currently configured not to display inline frames.
+	</iframe>
+  
+</div>
+
+
+<div id="Image" class="tabcontent">
+  <iframe id="I7" height="800" name="I7" src="image_online.html" width="100%" border="0" frameborder="0">
+	Your browser does not support inline frames or is currently configured not to display inline frames.
+	</iframe>
+  
+</div>
+
+<div id="History" class="tabcontent">
+  <iframe id="I8" height="800" name="I8" src="history.html" width="100%" border="0" frameborder="0">
+	Your browser does not support inline frames or is currently configured not to display inline frames.
+	</iframe>
+  
+</div>
+
+<div id="Medication Print" class="tabcontent">
+  <iframe id="I9" height="900" name="I9" src="medication_print.html" width="100%" border="0" frameborder="0">
+	Your browser does not support inline frames or is currently configured not to display inline frames.
+	</iframe>
+  
+</div>
+
+<div id="Medication" class="tabcontent">
+  <iframe id="I10" height="800" name="I10" src="medication.html" width="100%" border="0" frameborder="0">
+	Your browser does not support inline frames or is currently configured not to display inline frames.
+	</iframe>
+  
+</div>
+
+<div id="Notes" class="tabcontent">
+  <iframe id="I11" height="800" name="I11" src="david_sr_notes_online_only.html" width="100%" border="0" frameborder="0">
+	Your browser does not support inline frames or is currently configured not to display inline frames.
+	</iframe>
+  
+</div>
+
+<!--
+<iframe id="I11" name="I11" src="strip.html">
+Your browser does not support inline frames or is currently configured not to display inline frames.
+</iframe>
+-->
+
+<!-- don't change below-->
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+   
+  
+   
+</body>
+</html> 
